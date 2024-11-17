@@ -1,6 +1,10 @@
 # omniverse_notes
 Tracking Notes related to Omniverse installation and operation
 
+Update snap-store:
+
+https://askubuntu.com/questions/1411104/unable-to-update-snap-store-cannot-refresh-snap-store-snap-snap-store-ha
+
 Install VSCode:
 
 https://code.visualstudio.com/docs/setup/linux
@@ -13,23 +17,28 @@ Setup Git:
 
 https://docs.github.com/en/get-started/getting-started-with-git/set-up-git
 
+Disable Apparmor:
+
+https://askubuntu.com/questions/1511854/how-to-permanently-disable-ubuntus-new-apparmor-user-namespace-creation-restric
+
+Install Omniverse virtual workstation on Ubuntu:
+
+https://docs.omniverse.nvidia.com/launcher/latest/it-managed-launcher/install_guide_linux.html
+
+Install Isaac sim Workstation on Ubuntu:
+
+https://docs.omniverse.nvidia.com/isaacsim/latest/installation/install_workstation.html
+
+Install Isaac Sim container headless on AWS:
+
+https://docs.omniverse.nvidia.com/isaacsim/latest/installation/install_advanced_cloud_setup_aws.html
+
 Disable IOMMU Steps:
 
-Hi. You can leave SVM Mode enabled.
-The IOMMU setting should be on a different page. Look for something similar below.
-Advanced\AMD CBS\NBIO Common Options\IOMMU
+https://forums.developer.nvidia.com/t/isaac-sim-issue-with-iommu-on-bare-metal-despite-having-turned-it-off/278711
 
-After a reboot, you can verify that IOMMU is disabled if the two commands below do no print any outputs.
+Installing Pegasus Simulator:
 
-sudo dmesg | grep -e DMAR -e IOMMU
+https://pegasussimulator.github.io/PegasusSimulator/source/setup/installation.html
 
-ls /sys/kernel/iommu_groups/
 
-Hi. You might need help from the motherboard manufacturer to disable IOMMU for your specific hardware.
-
-Another thing to try is to disable SVM mode like before.
-Also try disable IOMMU in grub with similar commands below:
-
-sudo bash -c 'echo GRUB_CMDLINE_LINUX="amd_iommu=off" >> /etc/default/grub'
-sudo update-grub
-sudo reboot

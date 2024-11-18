@@ -51,9 +51,25 @@ https://github.com/CesiumGS/cesium-omniverse/blob/v0.23.0/docs/developer-setup/R
 
 sudo apt install python3-full
 sudo apt install pipx
-sudo pipx install conan==1.63.0
+pipx install conan==1.63.0
 pipx ensurepath
 pipx completions
 echo $0
 vim ~/.bashrc
 sudo reboot
+pipx install cmake-format --include-deps
+pipx install black==23.1.0 flake8==7.1.1
+
+
+Cloning the repo:
+
+  151  cd ~/.ssh
+  152  ls
+  153  ls -la
+  154  ssh-keygen -t ed25519 -C "sajith0481@gmail.com"
+  155  ls -la
+  156  eval "$(ssh-agent -s)"
+  157  ssh-add ~/.ssh/id_ed25519
+  158  cat ~/.ssh/id_ed25519.pub
+  159  cd ~/Desktop/git/
+  160  git clone git@github.com:CesiumGS/cesium-omniverse.git --recurse-submodules

@@ -37,8 +37,23 @@ Disable IOMMU Steps:
 
 https://forums.developer.nvidia.com/t/isaac-sim-issue-with-iommu-on-bare-metal-despite-having-turned-it-off/278711
 
+Install ROS2:
+
+https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html
+
 Installing Pegasus Simulator:
 
 https://pegasussimulator.github.io/PegasusSimulator/source/setup/installation.html
 
+Install Cesium for Omniverse Developer Setup:
 
+https://github.com/CesiumGS/cesium-omniverse/blob/v0.23.0/docs/developer-setup/README.md#linux
+
+sudo apt install python3-full
+sudo apt install pipx
+sudo pipx install conan==1.63.0
+pipx ensurepath
+pipx completions
+echo $0
+vim ~/.bashrc
+sudo reboot
